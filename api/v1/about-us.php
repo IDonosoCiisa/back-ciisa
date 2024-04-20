@@ -4,8 +4,10 @@ if ($_version == 'v1' && $_api == 'api' && $_endpoint == 'about-us') {
     switch ($_metodo) {
         case 'GET':
             if ($_header == $_token_get){
+                include_once 'controller.php';
+                $control = new Controlador();
                 http_response_code(200);
-                echo file_get_contents('../mockInfo/aboutUs.json');
+                echo $control->getAboutUs();
             }
             else {
                 http_response_code(401);

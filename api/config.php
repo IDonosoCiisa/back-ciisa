@@ -3,8 +3,8 @@ $_metodo = $_SERVER['REQUEST_METHOD'];
 $_ubicacion = $_SERVER['HTTP_HOST'];
 $_path = $_SERVER['REQUEST_URI'];
 $_partes = explode('/', $_path);
-$_version = $_partes[2];
-$_api = $_partes[3];
+$_version = $_partes[3];
+$_api = $_partes[2];
 $_endpoint =  explode('.', $_partes[4])[0];
 
 //header

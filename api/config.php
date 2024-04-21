@@ -8,8 +8,8 @@ $_api = $_partes[2];
 $_endpoint =  explode('.', $_partes[4])[0];
 
 //header
-header("Acces-Control-Allow-Origin: *");
-header("Acces-Control-Allow-Methods: GET");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET");
 header("Content-Type: application/json; charset=UTF-8");
 
 //Authorization

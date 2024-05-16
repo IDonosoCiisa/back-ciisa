@@ -9,7 +9,7 @@ $_endpoint =  explode('.', $_partes[4])[0];
 
 //header
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET");
+header("Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE");
 header("Content-Type: application/json; charset=UTF-8");
 
 //Authorization
@@ -25,4 +25,9 @@ try {
 }
 
 //Tokens
-$_token_get = 'Bearer ciisa';
+$_token_ciisa = 'Bearer ciisa';
+$_token_get = 'Bearer get';
+$_token_post = 'Bearer post';
+$_token_post = 'Bearer patch';
+$_token_put = 'Bearer put';
+$_token_delete = 'Bearer delete';

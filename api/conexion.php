@@ -1,4 +1,5 @@
 <?php
+
 class Conexion
 {
 
@@ -15,25 +16,27 @@ class Conexion
         $this->server = $_SERVER['HTTP_HOST'];
         $this->connection = null;
         $this->port = 3306;
-        $this->db = "ciisa";
+        $this->db = "ciisa_backend_v1_eva2_b";
         $this->host = "localhost";
 
         if ($this->server == 'localhost') {
-            $this->username = 'iDonoso';
+            $this->username = 'backEval2';
             $this->password = 'l4cl4v3';
         }
     }
 
-    public function getConnection(){
+    public function getConnection()
+    {
         $this->connection = mysqli_connect($this->host, $this->username, $this->password, $this->db, $this->port);
         mysqli_set_charset($this->connection, "utf8");
-        if (!$this->connection){
+        if (!$this->connection) {
             return mysqli_connect_errno();
         }
         return $this->connection;
     }
 
-    public function closeConnection(){
+    public function closeConnection()
+    {
         mysqli_close($this->connection);
     }
 }

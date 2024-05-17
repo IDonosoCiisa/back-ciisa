@@ -15,16 +15,12 @@ if ($_version == 'v2' && $_api == 'api' && $_endpoint == 'parcela') {
                 include_once 'controller.php';
                 $control = new ControladorParcela();
                 if (isset($valorId)) {
-                    $data = new stdClass();
-                    $data->terreno = $control->getParcelaById($valorId);
-                    $data->services = $control->getParcelaServicesById($valorId);
-                    http_response_code(200);
-                    echo json_encode(["data" => $data]);
+                    $lista = $control->getParcelaById($valorId);
                 } else {
                     $lista = $control->getAllParcelas();
-                    http_response_code(200);
-                    echo json_encode(["data" => $lista]);
                 }
+                http_response_code(200);
+                echo json_encode(["data" => $lista]);
 
             } else {
                 http_response_code(401);

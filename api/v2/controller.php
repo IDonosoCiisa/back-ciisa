@@ -66,18 +66,27 @@ class ControladorParcela
             }
             mysqli_free_result($rs);
         }
-        $con->closeConnection();
-        return $this->lista;
-    }
-
-    public function getParcelaServicesById($idParcela)
-    {
-        $con = new Conexion();
         $sql = "SELECT ps.nombre FROM parcela p inner join parcela_servicio_parcela psp on p.id = psp.parcela_id inner join parcela_servicio ps on ps.id = psp.id where p.id = $idParcela";
         $rs = mysqli_query($con->getConnection(), $sql);
         if ($rs) {
             while ($tupla = mysqli_fetch_assoc($rs)) {
-                array_push($this->services, $tupla);
+                array_push($this->lista, $tupla);
+            }
+            mysqli_free_result($rs);
+        }
+        $con->closeConnection();
+
+        return $this->lista;
+    }
+
+    public function getParcelaServices()
+    {
+        $con = new Conexion();
+        $sql = "SELECT ps.nombre FROM parcela p inner join parcela_servicio_parcela psp on p.id = psp.parcela_id inner join parcela_servicio ps on ps.id = psp.id";
+        $rs = mysqli_query($con->getConnection(), $sql);
+        if ($rs) {
+            while ($tupla = mysqli_fetch_assoc($rs)) {
+                array_push($this->lista, $tupla);
             }
             mysqli_free_result($rs);
         }

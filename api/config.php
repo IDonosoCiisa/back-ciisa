@@ -6,6 +6,7 @@ $_partes = explode('/', $_path);
 $_version = $_partes[3];
 $_api = $_partes[2];
 $_endpoint =  explode('.', $_partes[4])[0];
+$_parametros = $_partes[4];
 
 //header
 header("Access-Control-Allow-Origin: *");

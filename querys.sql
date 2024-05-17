@@ -162,3 +162,25 @@ INSERT INTO parcela_servicio_parcela (id, parcela_id, parcela_servicio_id) VALUE
 (3,1,3),
 (4,1,7),
 (5,1,9);
+
+-- select all parcelas 
+select p.nombre, p.parcela_lote_id, pl.nombre as 'nombre_parcela', p.parcela_tipo_id, pt.nombre as 'tipo_parcela', p.numeracion_interna, p.terreno_ancho,
+p.terreno_largo, p.terreno_despejado_arboles, p.ubicacion_latitud_gm, p.ubicacion_longitud_gm, p.activo
+from parcela as p
+inner join
+parcela_tipo as pt
+on p.parcela_tipo_id = pt.id
+inner join
+parcela_lote as pl
+on p.parcela_lote_id = pl.id;
+
+-- select servicios parcelas
+
+SELECT ps.nombre FROM parcela p
+inner join
+parcela_servicio_parcela psp
+on p.id = psp.parcela_id
+inner join
+parcela_servicio ps
+on ps.id = psp.id
+where p.id = ?

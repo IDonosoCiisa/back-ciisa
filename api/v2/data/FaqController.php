@@ -11,7 +11,7 @@ class ControladorFaq
     public function getFaq()
     {
         $con = new Conexion();
-        $sql = "SELECT pregunta, respuesta, activo FROM pregunta_frecuente";
+        $sql = "SELECT id, pregunta, respuesta, activo FROM pregunta_frecuente";
         $rs = mysqli_query($con->getConnection(), $sql);
         if ($rs) {
             while ($tupla = mysqli_fetch_assoc($rs)) {

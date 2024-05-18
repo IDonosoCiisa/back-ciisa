@@ -13,7 +13,7 @@ class ControladorHistoria
     public function getAllHistorias()
     {
         $con = new Conexion();
-        $sql = "SELECT h.texto, h.tipo, h.activo FROM historia h";
+        $sql = "SELECT h.id, h.texto, h.tipo, h.activo FROM historia h";
         $rs = mysqli_query($con->getConnection(), $sql);
         if ($rs) {
             while ($tupla = mysqli_fetch_assoc($rs)) {

@@ -11,7 +11,7 @@ class ControladorCategoriaServicio
     public function getCategoriaServicio()
     {
         $con = new Conexion();
-        $sql = "SELECT nombre, imagen, texto, activo FROM categoria_servicio";
+        $sql = "SELECT id, nombre, imagen, texto, activo FROM categoria_servicio";
         $rs = mysqli_query($con->getConnection(), $sql);
         if ($rs) {
             while ($tupla = mysqli_fetch_assoc($rs)) {

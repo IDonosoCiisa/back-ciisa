@@ -11,7 +11,7 @@ class ControladorInfoContacto
     public function getInfoContacto()
     {
         $con = new Conexion();
-        $sql = "SELECT nombre, icono, texto, texto_adicional, activo FROM info_contacto;";
+        $sql = "SELECT id, nombre, icono, texto, texto_adicional, activo FROM info_contacto;";
         $rs = mysqli_query($con->getConnection(), $sql);
         if ($rs) {
             while ($tupla = mysqli_fetch_assoc($rs)) {

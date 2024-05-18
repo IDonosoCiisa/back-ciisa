@@ -29,7 +29,7 @@ class ControladorHistoria
     public function getHistoriaById($idHistoria)
     {
         $con = new Conexion();
-        $sql = "select h.texto, h.tipo from historia h where h.id = $idHistoria";
+        $sql = "select h.texto, h.tipo, h.activo from historia h where h.id = $idHistoria";
         $rs = mysqli_query($con->getConnection(), $sql);
         if ($rs) {
             while ($tupla = mysqli_fetch_assoc($rs)) {
@@ -37,7 +37,7 @@ class ControladorHistoria
             }
             mysqli_free_result($rs);
         }
-        $sql = "SELECT i.activo, i.imagen, i.nombre FROM historia_imagen hi inner join imagen i on hi.imagen_id = i.id where hi.historia_id = $idHistoria";
+        $sql = "SELECT i.id as 'imagen_id', i.activo, i.imagen, i.nombre FROM historia_imagen hi inner join imagen i on hi.imagen_id = i.id where hi.historia_id = $idHistoria";
         $rs = mysqli_query($con->getConnection(), $sql);
         if ($rs) {
             while ($tupla = mysqli_fetch_assoc($rs)) {
@@ -59,9 +59,11 @@ class ControladorHistoria
         $rs = $stmt->execute(array($body->texto, $body->tipo));
         $new_id = $stmt->insert_id;
         $nrows = $stmt->affected_rows;
-        $sql = "INSERT INTO historia_imagen (historia_id, imagen_id) VALUES (?,?)";
-        $stmt = mysqli_prepare($con->getConnection(), $sql);
-        $rs1 = $stmt->execute(array($new_id, $body->imagen_id));
+        foreach ($body->imagenes as $imagen_id) {
+            $sql = "INSERT INTO historia_imagen (historia_id, imagen_id) VALUES (?,?)";
+            $stmt = mysqli_prepare($con->getConnection(), $sql);
+            $rs1 = $stmt->execute(array($new_id, $imagen_id));
+        }
         $nrows1 = $stmt->affected_rows;
         if (!$nrows && !$nrows1) {
             return false;
@@ -88,10 +90,15 @@ class ControladorHistoria
         $stmt = mysqli_prepare($con->getConnection(), $sql);
         $rs = $stmt->execute(array($body->texto, $body->tipo, $body->id));
         $nrows = $stmt->affected_rows;
-        $sql = "update historia_imagen set imagen_id = ? where historia_id = ?;";
+        $sql = "DELETE FROM historia_imagen where historia_id = ?;";
         $stmt = mysqli_prepare($con->getConnection(), $sql);
-        $rs1 = $stmt->execute(array($body->imagen_id, $body->id));
+        $rs1 = $stmt->execute(array($body->id));
         $nrows1 = $stmt->affected_rows;
+        foreach ($body->imagenes as $imagen_id) {
+            $sql = "INSERT INTO historia_imagen (historia_id, imagen_id) VALUES (?,?)";
+            $stmt = mysqli_prepare($con->getConnection(), $sql);
+            $rs1 = $stmt->execute(array($body->id, $imagen_id));
+        }
         if (!$nrows && !$nrows1) {
             return false;
         }

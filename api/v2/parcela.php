@@ -1,9 +1,6 @@
 <?php
 include_once '../config.php';
 
-if (strpos($_parametros, 'accion') !== false) {
-    $valorAccion = explode('=', $_parametros)[1];
-}
 if (strpos($_parametros, 'id') !== false) {
     $valorId = explode('=', $_parametros)[1];
 }

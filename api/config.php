@@ -29,6 +29,6 @@ try {
 $_token_ciisa = 'Bearer ciisa';
 $_token_get = 'Bearer get';
 $_token_post = 'Bearer post';
-$_token_post = 'Bearer patch';
+$_token_patch = 'Bearer patch';
 $_token_put = 'Bearer put';
 $_token_delete = 'Bearer delete';

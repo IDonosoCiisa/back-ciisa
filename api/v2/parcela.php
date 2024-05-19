@@ -80,17 +80,22 @@ if ($_version == 'v2' && $_api == 'api' && $_endpoint == 'parcela') {
             break;
         case "DELETE":
             if ($_header == $_token_delete) {
-                include_once "controller.php";
-                $control = new ControladorParcela();
-                $body = json_decode(file_get_contents("php://input", true));
-                $rs = $control->deleteParcela($body->id);
-                if ($rs) {
-                    http_response_code(200);
-                    echo json_encode(["data" => $rs]);
+                if (isset($valorId)) {
+                    include_once "controller.php";
+                    $control = new ControladorParcela();
+                    $rs = $control->deleteParcela($valorId);
+                    if ($rs) {
+                        http_response_code(200);
+                        echo json_encode(["data" => $rs]);
+                    } else {
+                        http_response_code(400);
+                        echo json_encode(["data" => "data no válida"]);
+                    }
                 } else {
                     http_response_code(400);
                     echo json_encode(["data" => "data no válida"]);
                 }
+
             } else {
                 http_response_code(401);
                 echo json_encode(["Error" => "No tiene autorizacion DELETE"]);

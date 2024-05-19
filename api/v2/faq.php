@@ -70,13 +70,17 @@ if ($_version == 'v2' && $_api == 'api' && $_endpoint == 'faq') {
             break;
         case "DELETE":
             if ($_header == $_token_delete) {
-                include_once "controller.php";
-                $control = new ControladorFaq();
-                $body = json_decode(file_get_contents("php://input", true));
-                $rs = $control->deleteFaq($body->id);
-                if ($rs) {
-                    http_response_code(200);
-                    echo json_encode(["data" => $rs]);
+                if (isset($valorId)) {
+                    include_once "controller.php";
+                    $control = new ControladorFaq();
+                    $rs = $control->deleteFaq($valorId);
+                    if ($rs) {
+                        http_response_code(200);
+                        echo json_encode(["data" => $rs]);
+                    } else {
+                        http_response_code(400);
+                        echo json_encode(["data" => "data no válida"]);
+                    }
                 } else {
                     http_response_code(400);
                     echo json_encode(["data" => "data no válida"]);

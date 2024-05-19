@@ -5,8 +5,11 @@ $_path = $_SERVER['REQUEST_URI'];
 $_partes = explode('/', $_path);
 $_version = $_partes[3];
 $_api = $_partes[2];
-$_endpoint =  explode('.', $_partes[4])[0];
+$_endpoint = explode('.', $_partes[4])[0];
 $_parametros = $_partes[4];
+if (strpos($_parametros, 'id') !== false) {
+    $valorId = explode('=', $_parametros)[1];
+}
 
 //header
 header("Access-Control-Allow-Origin: *");
@@ -17,7 +20,7 @@ header("Content-Type: application/json; charset=UTF-8");
 $_header = null;
 try {
     $_header = isset(getallheaders()['Authorization']) ? getallheaders()['Authorization'] : null;
-    if ($_header === null){
+    if ($_header === null) {
         throw new Exception("No tiene autorizacion");
     }
 } catch (Exception $e) {

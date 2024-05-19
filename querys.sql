@@ -6,7 +6,7 @@ FLUSH PRIVILEGES;
 USE ciisa_backend_v1_eva2_B;
 
 CREATE TABLE categoria_servicio (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL UNIQUE, -- COSTRAINT
     imagen TEXT NOT NULL,
     texto TEXT NOT NULL,
@@ -19,7 +19,7 @@ INSERT INTO categoria_servicio (id, nombre, imagen, texto, activo) VALUES
 (3, 'Financiamiento', 'https://instagram.fscl35-1.fna.fbcdn.net/v/t51.29350-15/405813698_872745981244612_7720596082863161741_n.heic?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYyOTM1MCJ9&_nc_ht=instagram.fscl35-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=3YvV2HQfnjIQ7kNvgG6-88z&edm=ANTKIIoBAAAA&ccb=7-5&oh=00_AfCZ3zK3eIUCO95Q0kaDs1COr7HlXav7kL09dq-Vvs7SVg&oe=6638BD91&_nc_sid=cf751b', 'La empresa ofrece crédito directo sin necesidad de pasar por bancos, avales o requisitos complicados.', true);
 
 CREATE TABLE info_contacto (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL UNIQUE, -- COSTRAINT
     icono VARCHAR(20),
     texto TEXT NOT NULL,
@@ -32,7 +32,7 @@ INSERT INTO info_contacto (id, nombre, texto, texto_adicional, activo) VALUES
 (2, 'instagram', 'terrasol_parcelas', 'https://www.instagram.com/terrasol_parcelas?igsh=eG51a2w4NGx5ODJu',true);
 
 CREATE TABLE imagen (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL UNIQUE, -- COSTRAINT
     imagen TEXT NOT NULL,
     activo BOOLEAN NOT NULL DEFAULT FALSE
@@ -45,7 +45,7 @@ INSERT INTO imagen (id, nombre, imagen, activo) VALUES
 
 
 CREATE TABLE historia (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     tipo VARCHAR(50) NOT NULL,
     texto TEXT,
     activo BOOLEAN NOT NULL DEFAULT FALSE
@@ -61,7 +61,7 @@ INSERT INTO historia (id, tipo, texto, activo) VALUES
 (7, 'imagen', '', true);
 
 CREATE TABLE historia_imagen (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     historia_id INT NOT NULL,
     imagen_id INT NOT NULL,
     FOREIGN KEY (historia_id) REFERENCES historia (id),
@@ -73,7 +73,7 @@ INSERT INTO historia_imagen (id, historia_id, imagen_id) VALUES
 (2, 7, 2);
 
 CREATE TABLE pregunta_frecuente (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     pregunta TEXT NOT NULL,
     respuesta TEXT NOT NULL,
     activo BOOLEAN NOT NULL DEFAULT FALSE    
@@ -85,7 +85,7 @@ INSERT INTO pregunta_frecuente (id, pregunta, respuesta, activo) VALUES
 (3, '¿Cómo veo los temas de financiamiento directo?', 'Puedes contactarnos por mensaje directo en instagram o facebook y nos indicas que buscas financiamientos.',true);
 
 CREATE TABLE parcela_tipo(
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(20) NOT NULL,
     activo BOOLEAN NOT NULL DEFAULT FALSE    
 );
@@ -95,7 +95,7 @@ INSERT INTO parcela_tipo (id, nombre, activo) VALUES
 (2, 'Parcela con Casa', true);
 
 CREATE TABLE parcela_lote (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(20) NOT NULL,
     activo BOOLEAN NOT NULL DEFAULT FALSE
 );
@@ -105,7 +105,7 @@ INSERT INTO parcela_lote (id, nombre, activo) VALUES
 (2, 'Brisas de Parral', true);
 
 CREATE TABLE parcela_servicio (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
     activo BOOLEAN NOT NULL DEFAULT FALSE
 );
@@ -128,7 +128,7 @@ INSERT INTO parcela_servicio (id, nombre, activo) VALUES
 (15, 'Terrenos aptos para el cultivo y agricultura', true);
 
 CREATE TABLE parcela (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(20) NOT NULL,
     parcela_lote_id INT NOT NULL,
     parcela_tipo_id INT NOT NULL,
@@ -149,7 +149,7 @@ INSERT INTO parcela (id, nombre, parcela_lote_id, parcela_tipo_id, numeracion_in
 (1, 'San Nicolás - A1', 1, 1, 'A1', 100, 50, TRUE, -36.502028, -72.231966, 1500000, 15990000, TRUE);
 
 CREATE TABLE parcela_servicio_parcela (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     parcela_id INT NOT NULL,
     parcela_servicio_id INT NOT NULL,
     FOREIGN KEY (parcela_id) REFERENCES parcela (id),
@@ -162,25 +162,3 @@ INSERT INTO parcela_servicio_parcela (id, parcela_id, parcela_servicio_id) VALUE
 (3,1,3),
 (4,1,7),
 (5,1,9);
-
--- select all parcelas 
-select p.nombre, p.parcela_lote_id, pl.nombre as 'nombre_parcela', p.parcela_tipo_id, pt.nombre as 'tipo_parcela', p.numeracion_interna, p.terreno_ancho,
-p.terreno_largo, p.terreno_despejado_arboles, p.ubicacion_latitud_gm, p.ubicacion_longitud_gm, p.activo
-from parcela as p
-inner join
-parcela_tipo as pt
-on p.parcela_tipo_id = pt.id
-inner join
-parcela_lote as pl
-on p.parcela_lote_id = pl.id;
-
--- select servicios parcelas
-
-SELECT ps.nombre FROM parcela p
-inner join
-parcela_servicio_parcela psp
-on p.id = psp.parcela_id
-inner join
-parcela_servicio ps
-on ps.id = psp.id
-where p.id = ?

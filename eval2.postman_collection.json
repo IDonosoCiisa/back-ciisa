@@ -1,0 +1,4126 @@
+{
+	"info": {
+		"_postman_id": "658dcf6b-929f-4ecf-b47a-f4bb5737b538",
+		"name": "eval2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16007854"
+	},
+	"item": [
+		{
+			"name": "Parcela",
+			"item": [
+				{
+					"name": "getAll parcela",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "get",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAll parcela",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"parcela.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:01:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "351"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"nombre\": \"San Nicolás - A1\",\n            \"parcela_lote_id\": \"1\",\n            \"nombre_parcela\": \"San Nicolás\",\n            \"parcela_tipo_id\": \"1\",\n            \"tipo_parcela\": \"Solo Parcela\",\n            \"numeracion_interna\": \"A1\",\n            \"terreno_ancho\": \"100\",\n            \"terreno_largo\": \"50\",\n            \"terreno_despejado_arboles\": \"1\",\n            \"ubicacion_latitud_gm\": \"-36.502028\",\n            \"ubicacion_longitud_gm\": \"-72.231966\",\n            \"activo\": \"1\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "getById parcela",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "get",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/parcela.php?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"parcela.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getById parcela",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/parcela.php?id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"parcela.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:02:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "475"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"nombre\": \"San Nicolás - A1\",\n            \"parcela_lote_id\": \"1\",\n            \"nombre_parcela\": \"San Nicolás\",\n            \"parcela_tipo_id\": \"1\",\n            \"tipo_parcela\": \"Solo Parcela\",\n            \"numeracion_interna\": \"A1\",\n            \"terreno_ancho\": \"100\",\n            \"terreno_largo\": \"50\",\n            \"terreno_despejado_arboles\": \"1\",\n            \"ubicacion_latitud_gm\": \"-36.502028\",\n            \"ubicacion_longitud_gm\": \"-72.231966\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Rol Propio\"\n        },\n        {\n            \"nombre\": \"Agua potable\"\n        },\n        {\n            \"nombre\": \"Factibilidad de luz\"\n        },\n        {\n            \"nombre\": \"Pozo\"\n        },\n        {\n            \"nombre\": \"Áreas comunes\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "new parcela",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "post",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"qqwe\",\r\n    \"parcela_lote_id\": 1,\r\n    \"parcela_tipo_id\": 1,\r\n    \"numeracion_interna\": \"123\",\r\n    \"terreno_ancho\": 22,\r\n    \"terreno_largo\": 22,\r\n    \"terreno_despejado_arboles\": true,\r\n    \"ubicacion_latitud_gm\": 223.1,\r\n    \"ubicacion_longitud_gm\": 223.1,\r\n    \"pie\": 1000,\r\n    \"valor\": 1000,\r\n    \"servicios_parcela\": [\r\n        11,\r\n        12,\r\n        13,\r\n        14\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new parcela",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"qqwe\",\r\n    \"parcela_lote_id\": 1,\r\n    \"parcela_tipo_id\": 1,\r\n    \"numeracion_interna\": \"123\",\r\n    \"terreno_ancho\": 22,\r\n    \"terreno_largo\": 22,\r\n    \"terreno_despejado_arboles\": true,\r\n    \"ubicacion_latitud_gm\": 223.1,\r\n    \"ubicacion_longitud_gm\": 223.1,\r\n    \"pie\": 1000,\r\n    \"valor\": 1000,\r\n    \"servicios_parcela\": [\r\n        11,\r\n        12,\r\n        13,\r\n        14\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"parcela.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:02:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "activo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"activo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "activo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"activo\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"parcela.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:03:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "inactivo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"activo\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inactivo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"activo\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"parcela.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:03:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "put parcela",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "put",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"ASDF\",\r\n    \"parcela_lote_id\": 1,\r\n    \"parcela_tipo_id\": 1,\r\n    \"numeracion_interna\": \"update\",\r\n    \"terreno_ancho\": 33,\r\n    \"terreno_largo\": 33,\r\n    \"terreno_despejado_arboles\": false,\r\n    \"ubicacion_latitud_gm\": 223.1,\r\n    \"ubicacion_longitud_gm\": 223.1,\r\n    \"pie\": 1000,\r\n    \"valor\": 1000,\r\n    \"servicios_parcela\": [\r\n        14\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "put parcela",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"ASDF\",\r\n    \"parcela_lote_id\": 1,\r\n    \"parcela_tipo_id\": 1,\r\n    \"numeracion_interna\": \"update\",\r\n    \"terreno_ancho\": 33,\r\n    \"terreno_largo\": 33,\r\n    \"terreno_despejado_arboles\": false,\r\n    \"ubicacion_latitud_gm\": 223.1,\r\n    \"ubicacion_longitud_gm\": 223.1,\r\n    \"pie\": 1000,\r\n    \"valor\": 1000,\r\n    \"servicios_parcela\": [\r\n        14\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"parcela.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:04:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "delete parcela",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "delete",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/parcela.php?id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"parcela.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete parcela",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/parcela.php?id=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"parcela.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:05:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "servicios-parcela",
+			"item": [
+				{
+					"name": "servicios-parcela",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "get",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"servicios-parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "servicios-parcela",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"servicios-parcela.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:05:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "897"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"nombre\": \"Rol Propio\",\n            \"id\": \"1\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Agua potable\",\n            \"id\": \"2\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Factibilidad de luz\",\n            \"id\": \"3\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Gas natural\",\n            \"id\": \"4\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Fibra óptica\",\n            \"id\": \"5\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Gas\",\n            \"id\": \"6\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Pozo\",\n            \"id\": \"7\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Alcantarillado\",\n            \"id\": \"8\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Áreas comunes\",\n            \"id\": \"9\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Camino Pavimentado al Parcelado\",\n            \"id\": \"10\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Camino Ripeado al Parcelado\",\n            \"id\": \"11\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Camino Pavimentado interior\",\n            \"id\": \"12\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Camino Ripeado interior\",\n            \"id\": \"13\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Camino Ripeado interior\",\n            \"id\": \"14\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"Terrenos aptos para el cultivo y agricultura\",\n            \"id\": \"15\",\n            \"activo\": \"1\"\n        },\n        {\n            \"nombre\": \"parcela de agradoasda\",\n            \"id\": \"16\",\n            \"activo\": \"0\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "New servicios-parcela",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "post",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"parcela de agradoasda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"servicios-parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New servicios-parcela",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"parcela de agradoasda\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"servicios-parcela.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:05:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "patch activo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"activo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"servicios-parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "patch activo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"activo\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"servicios-parcela.php"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:05:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"data no válida\"\n}"
+						}
+					]
+				},
+				{
+					"name": "patch inactivo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"activo\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"servicios-parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "patch inactivo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"activo\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"servicios-parcela.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:05:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "put servicio=parcela",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "put",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"asdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"servicios-parcela.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "put servicio=parcela",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"asdf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"servicios-parcela.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:05:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "delete servicio parcela",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "delete",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php?id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"servicios-parcela.php"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete servicio parcela",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/servicios-parcela.php?id=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"servicios-parcela.php"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:06:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "info-contacto",
+			"item": [
+				{
+					"name": "info-contacto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "get",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"info-contacto.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "info-contacto",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"info-contacto.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:06:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "370"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"nombre\": \"facebook\",\n            \"icono\": null,\n            \"texto\": \"Tu parcela en el sur de Chile\",\n            \"texto_adicional\": \"https://www.facebook.com/tuparcelaenelsurdechile?mibextid=ZbWKwL\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"2\",\n            \"nombre\": \"instagram\",\n            \"icono\": null,\n            \"texto\": \"terrasol_parcelas\",\n            \"texto_adicional\": \"https://www.instagram.com/terrasol_parcelas?igsh=eG51a2w4NGx5ODJu\",\n            \"activo\": \"1\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "new-info-contacto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "post",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"icono\": \"iconoNuevo\",\r\n    \"nombre\": \"XasdX\",\r\n    \"texto\": \"lorem\",\r\n    \"texto_adicional\": \"ipsum\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"info-contacto.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new-info-contacto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"icono\": \"iconoNuevo\",\r\n    \"nombre\": \"XasdX\",\r\n    \"texto\": \"lorem\",\r\n    \"texto_adicional\": \"ipsum\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"info-contacto.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:06:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "activo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activo\": true,\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"info-contacto.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "activo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activo\": true,\r\n    \"id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"info-contacto.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:07:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "inactivo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activo\": false,\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"info-contacto.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inactivo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activo\": false,\r\n    \"id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"info-contacto.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:06:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "modify-info-contacto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "put",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"icono\": \"iconoNuevo\",\r\n    \"nombre\": \"XX\",\r\n    \"texto\": \"lorem\",\r\n    \"texto_adicional\": \"ipsum\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"info-contacto.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "modify-info-contacto",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5,\r\n    \"icono\": \"iconoNuevo\",\r\n    \"nombre\": \"XX\",\r\n    \"texto\": \"lorem\",\r\n    \"texto_adicional\": \"ipsum\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"info-contacto.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:08:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-info-contacto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "delete",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php?id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"info-contacto.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete-info-contacto",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/info-contacto.php?id=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"info-contacto.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:08:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categoria-servicio",
+			"item": [
+				{
+					"name": "categoria-servicio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "get",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"categoria-servicio.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "categoria-servicio",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"categoria-servicio.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:08:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1655"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"nombre\": \"Parcelas\",\n            \"imagen\": \"https://instagram.fscl35-1.fna.fbcdn.net/v/t51.29350-15/401321686_672984534973103_839303226120565269_n.heic?stp=dst-jpg_e35_s1080x1080&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMjAweDEyMDAuc2RyLmYyOTM1MCJ9&_nc_ht=instagram.fscl35-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=rUFo40wWercQ7kNvgFIlSrm&edm=ANTKIIoBAAAA&ccb=7-5&oh=00_AfA5CfXkADZck841EwphR9zK38pzE6tncDLCPiGqRUVb-w&oe=6638C159&_nc_sid=cf751b\",\n            \"texto\": \"Especializados en la venta de parcelas de 5000 metros cuadrados.\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"2\",\n            \"nombre\": \"Casas en Parcelas\",\n            \"imagen\": \"https://instagram.fscl35-1.fna.fbcdn.net/v/t51.29350-15/435520809_3615791345302050_8352826681605198519_n.heic?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi45NjB4OTYwLnNkci5mMjkzNTAifQ&_nc_ht=instagram.fscl35-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=meuCXidc6CUQ7kNvgGkSHtF&edm=ANTKIIoBAAAA&ccb=7-5&oh=00_AfBhTqFTr4Z4bvRjpnFLvUOFlOgif1v4MJLraIjskro6vQ&oe=6638B9BC&_nc_sid=cf751b\",\n            \"texto\": \"Disponemos de parcelas con la construcción hecha de la casa soñada.\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"3\",\n            \"nombre\": \"Financiamiento\",\n            \"imagen\": \"https://instagram.fscl35-1.fna.fbcdn.net/v/t51.29350-15/405813698_872745981244612_7720596082863161741_n.heic?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYyOTM1MCJ9&_nc_ht=instagram.fscl35-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=3YvV2HQfnjIQ7kNvgG6-88z&edm=ANTKIIoBAAAA&ccb=7-5&oh=00_AfCZ3zK3eIUCO95Q0kaDs1COr7HlXav7kL09dq-Vvs7SVg&oe=6638BD91&_nc_sid=cf751b\",\n            \"texto\": \"La empresa ofrece crédito directo sin necesidad de pasar por bancos, avales o requisitos complicados.\",\n            \"activo\": \"1\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "new categoria-servicio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "post",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"nuevo\",\r\n    \"imagen\": \"asdffgasd\",\r\n    \"texto\": \"lorem\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"categoria-servicio.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new categoria-servicio",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"nuevo\",\r\n    \"imagen\": \"asdffgasd\",\r\n    \"texto\": \"lorem\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"categoria-servicio.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:08:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "activo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activo\": true,\r\n    \"id\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"categoria-servicio.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "activo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activo\": true,\r\n    \"id\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"categoria-servicio.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:09:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "inactivo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activo\": false,\r\n    \"id\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"categoria-servicio.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inactivo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activo\": false,\r\n    \"id\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"categoria-servicio.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:09:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "modify-categoria-servicio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "put",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"nombre\": \"XX\",\r\n    \"texto\": \"lorem\",\r\n    \"imagen\": \"update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"categoria-servicio.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "modify-categoria-servicio",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5,\r\n    \"nombre\": \"XX\",\r\n    \"texto\": \"lorem\",\r\n    \"imagen\": \"update\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"categoria-servicio.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:10:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-info-contacto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "delete",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php?id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"categoria-servicio.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete-info-contacto",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/categoria-servicio.php?id=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"categoria-servicio.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:10:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "FAQ",
+			"item": [
+				{
+					"name": "get-faq",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "get",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"faq.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-faq",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"faq.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:10:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "584"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"pregunta\": \"¿Cómo solicito una cotización?\",\n            \"respuesta\": \"Puedes contactarnos por mensaje directo en instagram o facebook y nos pides la cotización.\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"2\",\n            \"pregunta\": \"¿Cómo veo una parcela o casa?\",\n            \"respuesta\": \"Puedes solicitar visita virtual por mensaje directo en instagram o facebook\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"3\",\n            \"pregunta\": \"¿Cómo veo los temas de financiamiento directo?\",\n            \"respuesta\": \"Puedes contactarnos por mensaje directo en instagram o facebook y nos indicas que buscas financiamientos.\",\n            \"activo\": \"1\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "new-faq",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "post",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pregunta\": \"nuevo\",\r\n    \"respuesta\": \"asdffgasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"faq.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new-faq",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pregunta\": \"nuevo\",\r\n    \"respuesta\": \"asdffgasd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"faq.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:10:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "activo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activo\": true,\r\n    \"id\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"faq.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "activo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activo\": true,\r\n    \"id\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"faq.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:11:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "inactivo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activo\": false,\r\n    \"id\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"faq.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inactivo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activo\": false,\r\n    \"id\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"faq.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:11:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "modify-faq",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "put",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"pregunta\": \"update\",\r\n    \"respuesta\": \"asdffgasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"faq.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "modify-faq",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5,\r\n    \"pregunta\": \"update\",\r\n    \"respuesta\": \"asdffgasd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/faq.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"faq.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:12:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-faq",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "delete",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/faq.php?id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"faq.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete-faq",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/faq.php?id=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"faq.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:12:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Historia",
+			"item": [
+				{
+					"name": "get-historia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "get",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"historia.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-historia",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"historia.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:13:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1579"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"texto\": \"Terrasol Parcelas no solo ofrece tierras, sino también un estilo de vida.\",\n            \"tipo\": \"titulo\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"2\",\n            \"texto\": \"Inicios\",\n            \"tipo\": \"subtitulo\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"3\",\n            \"texto\": \"Terrasol Parcelas emerge como un referente en el mercado inmobiliario de la zona centro sur de Chile, ofreciendo una oportunidad única para aquellos que buscan invertir en la naturaleza y la tranquilidad de este idílico paisaje. Especializados en la venta de parcelas de 5000 metros cuadrados, Terrasol Parcelas facilita el acceso a la propiedad de tierras con una inversión inicial accesible, comenzando desde tan solo 1 millón de pesos.\",\n            \"tipo\": \"parrafo\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"4\",\n            \"texto\": \"\",\n            \"tipo\": \"imagen\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"5\",\n            \"texto\": \"Nos diferenciamos\",\n            \"tipo\": \"subtitulo\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"6\",\n            \"texto\": \"Lo que diferencia a Terrasol Parcelas es su enfoque innovador y centrado en el cliente. Con el objetivo de brindar una experiencia completa y transparente, la empresa ofrece un tour virtual de las parcelas, permitiendo a los clientes explorar y visualizar cada rincón de sus futuras propiedades desde la comodidad de sus hogares. Además, para aquellos que buscan una solución integral, Terrasol Parcelas también ofrece la opción de adquirir parcelas que incluyen casas, proporcionando una alternativa llave en mano para aquellos que desean una vida en armonía con la naturaleza sin sacrificar comodidades modernas.\",\n            \"tipo\": \"parrafo\",\n            \"activo\": \"1\"\n        },\n        {\n            \"id\": \"7\",\n            \"texto\": \"\",\n            \"tipo\": \"imagen\",\n            \"activo\": \"1\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get-historia-by-id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "get",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/historia.php?id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"historia.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-historia-by-id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/historia.php?id=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"historia.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:13:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "522"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"texto\": \"\",\n            \"tipo\": \"imagen\",\n            \"activo\": \"1\"\n        },\n        {\n            \"imagen_id\": \"1\",\n            \"activo\": \"1\",\n            \"imagen\": \"https://instagram.fscl35-1.fna.fbcdn.net/v/t51.29350-15/401321686_672984534973103_839303226120565269_n.heic?stp=dst-jpg_e35_s1080x1080&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMjAweDEyMDAuc2RyLmYyOTM1MCJ9&_nc_ht=instagram.fscl35-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=rUFo40wWercQ7kNvgFIlSrm&edm=ANTKIIoBAAAA&ccb=7-5&oh=00_AfA5CfXkADZck841EwphR9zK38pzE6tncDLCPiGqRUVb-w&oe=6638C159&_nc_sid=cf751b\",\n            \"nombre\": \"Imagen Parcela\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "new-historia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "post",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"texto\": \"nuevo\",\r\n    \"tipo\": \"asdffgasd\",\r\n    \"imagenes\": [1,2,3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"historia.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new-historia",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"texto\": \"nuevo\",\r\n    \"tipo\": \"asdffgasd\",\r\n    \"imagenes\": [1,2,3]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"historia.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:13:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "activo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activo\": true,\r\n    \"id\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"historia.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "activo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activo\": true,\r\n    \"id\": 9\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"historia.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:13:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "inactivo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "patch",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activo\": false,\r\n    \"id\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"historia.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inactivo",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activo\": false,\r\n    \"id\": 9\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"historia.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:13:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "modify-historia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "put",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 9,\r\n    \"texto\": \"ASDF\",\r\n    \"tipo\": \"asdffgasd\",\r\n    \"imagenes\": [\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"historia.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "modify-historia",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 9,\r\n    \"texto\": \"ASDF\",\r\n    \"tipo\": \"asdffgasd\",\r\n    \"imagenes\": [\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/back-ciisa/api/v2/historia.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"back-ciisa",
+										"api",
+										"v2",
+										"historia.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 20:14:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,PATCH,DELETE"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-historia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "delete",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/back-ciisa/api/v2/historia.php?id=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"back-ciisa",
+								"api",
+								"v2",
+								"historia.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

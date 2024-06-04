@@ -48,7 +48,7 @@ if ($_version == 'v2' && $_api == 'api' && $_endpoint == 'servicios-parcela') {
                 }
             } else {
                 http_response_code(401);
-                echo json_encode(["Error" => "No tiene autorizacion POST"]);
+                echo json_encode(["Error" => "No tiene autorizacion PATCH"]);
             }
             break;
         case "PUT":
@@ -66,7 +66,7 @@ if ($_version == 'v2' && $_api == 'api' && $_endpoint == 'servicios-parcela') {
                 }
             } else {
                 http_response_code(401);
-                echo json_encode(["Error" => "No tiene autorizacion POST"]);
+                echo json_encode(["Error" => "No tiene autorizacion PUT"]);
             }
             break;
         case "DELETE":

@@ -9,3 +9,7 @@ Querys SQL editadas para cambio en nombre de usuario y auto incremento de los id
 Adjuntada nuestra colección de postman que tiene la evidencia de la ejecución de cada endpoint.
 
 Coleccion = eval2.postman_collection.json
+
+Adjuntado Swagger con cada endpoint y posibilidad de authorizar las llamadas por Bearer.
+Archivo Swagger:
+Swagger.yaml
